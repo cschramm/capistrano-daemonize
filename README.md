@@ -21,7 +21,7 @@ You can use the `:pidfile` and `:logfile` options to defined the respective
 files, which default to `"#{shared_path}/pids/myworker.pid"` and
 `"#{shared_path}/log/myworker.log"`.
 
-`:chdir` may be used to set the the working directory for the daemon and
+`:chdir` may be used to set the working directory for the daemon and
 `:user` to switch to another user than logged in.
 
 Other options, like `:role` in the example above, will be used when defining the tasks.
