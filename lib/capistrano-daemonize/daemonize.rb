@@ -27,7 +27,7 @@ module Capistrano
       end
 
       namespace name do
-        task :start, options do
+        task :start, { desc: "Start #{name}" }.merge(options) do
           run <<-SCRIPT
 if [ -e #{daemonize_pidfile} ]; then
   echo 'pidfile exists';
@@ -42,14 +42,14 @@ sleep 1
           SCRIPT
         end
 
-        task :stop, options do
+        task :stop, { desc: "Stop #{name}" }.merge(options) do
           run <<-SCRIPT
 #{sudo_command} /sbin/start-stop-daemon --stop --pidfile #{daemonize_pidfile};
 rm -f #{daemonize_pidfile}
           SCRIPT
         end
 
-        task :restart, options do
+        task :restart, { desc: "Restart #{name}" }.merge(options) do
           stop
           start
         end
