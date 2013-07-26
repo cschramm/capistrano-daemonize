@@ -37,7 +37,8 @@ fi;
 #{daemonize_sudo} /sbin/start-stop-daemon --pidfile #{daemonize_pidfile} \
 --start --make-pidfile --chdir #{daemonize_chdir} --user #{daemonize_user} \
 --background --exec #{command.split[0]} -- #{command.split[1..-1].join(' ')} \
-2>&1 >>#{daemonize_logfile} RAILS_ENV=#{rails_env}
+2>&1 >>#{daemonize_logfile} RAILS_ENV=#{rails_env};
+sleep 1
           SCRIPT
         end
 
