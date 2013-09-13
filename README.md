@@ -1,4 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/capistrano-daemonize.png)](http://badge.fury.io/rb/capistrano-daemonize)
+[![Dependency Status](https://gemnasium.com/cschramm/capistrano-daemonize.png)](https://gemnasium.com/cschramm/capistrano-daemonize)
 
 capistrano-daemonize adds a daemonize method to Capistrano's DSL to generate tasks that control arbitrary processes as daemons.
 It makes use of Debian's /sbin/start-stop-daemon, which is available in every Debian-based Linux distribution like Ubuntu.
