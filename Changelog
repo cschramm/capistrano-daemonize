@@ -1,3 +1,7 @@
+master
+
+* Require capistrano < 3.0
+
 0.9.1
 
 * Add workaround for PTYs
